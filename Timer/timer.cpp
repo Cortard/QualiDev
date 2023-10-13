@@ -9,6 +9,7 @@ Timer::Timer(QWidget *parent) : QWidget(parent), ui(new Ui::Timer) {
     connect(timer, SIGNAL(timeout()), this, SLOT(mafonction()));// connexion du slot
     timer->start();
 
+    ui->radioButtonLent->setChecked(true);
     connect(ui->radioButtonLent, SIGNAL(clicked()), this, SLOT(on_changeVitesse()));
     connect(ui->radioButtonMoyen, SIGNAL(clicked()), this, SLOT(on_changeVitesse()));
     connect(ui->radioButtonRapide, SIGNAL(clicked()), this, SLOT(on_changeVitesse()));
