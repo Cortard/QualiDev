@@ -14,6 +14,7 @@ Timer::Timer(QWidget *parent) : QWidget(parent), ui(new Ui::Timer) {
     connect(ui->radioButtonMoyen, SIGNAL(clicked()), this, SLOT(on_changeVitesse()));
     connect(ui->radioButtonRapide, SIGNAL(clicked()), this, SLOT(on_changeVitesse()));
 
+    ui->spinBox->setDisplayIntegerBase(36);
 }
 
 Timer::~Timer() {
