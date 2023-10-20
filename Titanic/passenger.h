@@ -11,6 +11,8 @@ class Passenger
 public:
     Passenger();
     Passenger(const QString &iden, int classe, int age, int sexe, int survived);
+    int getSexe() const;
+
 private:
     QString iden;
     int classe;

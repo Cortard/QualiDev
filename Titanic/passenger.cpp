@@ -11,3 +11,8 @@ Passenger::Passenger(const QString &iden, int classe, int age, int sexe, int sur
     sexe(sexe),
     survived(survived)
 {}
+
+int Passenger::getSexe() const
+{
+    return sexe;
+}

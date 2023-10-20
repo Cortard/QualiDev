@@ -9,7 +9,6 @@ class Data
 public:
     Data();
     bool readData();
-private:
     QList<Passenger> passengers;
 };
 

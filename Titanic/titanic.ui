@@ -14,8 +14,41 @@
    <string>Titanic</string>
   </property>
   <widget class="QWidget" name="centralwidget"/>
-  <widget class="QMenuBar" name="menubar"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuGraphique">
+    <property name="title">
+     <string>Graphique</string>
+    </property>
+    <addaction name="actionRatio_H_F"/>
+    <addaction name="actionCat_gorie"/>
+    <addaction name="action_ge_Cat_gorie"/>
+   </widget>
+   <addaction name="menuGraphique"/>
+  </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionRatio_H_F">
+   <property name="text">
+    <string>Ratio H/F</string>
+   </property>
+  </action>
+  <action name="actionCat_gorie">
+   <property name="text">
+    <string>Catégorie</string>
+   </property>
+  </action>
+  <action name="action_ge_Cat_gorie">
+   <property name="text">
+    <string>Âge/Catégorie</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

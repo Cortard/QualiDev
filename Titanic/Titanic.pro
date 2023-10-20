@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui charts
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -10,14 +10,18 @@ CONFIG += c++17
 
 SOURCES += \
     main.cpp \
+    piechart.cpp \
     titanic.cpp \
     passenger.cpp \
-    data.cpp
+    data.cpp \
+     abstractchartview.cpp
 
 HEADERS += \
+    piechart.h \
     titanic.h \
     passenger.h \
-    data.h
+    data.h \
+    abstractchartview.h
 
 FORMS += \
     titanic.ui

@@ -5,10 +5,10 @@
 
 int main(int argc, char *argv[])
 {
-    Data data;
-    qDebug()<<data.readData();
+    Data* data = new Data;
+    qDebug()<<data->readData();
     QApplication a(argc, argv);
-    Titanic w;
+    Titanic w(data);
     w.show();
     return a.exec();
 }
