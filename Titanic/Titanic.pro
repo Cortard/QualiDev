@@ -9,6 +9,8 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    barchartview.cpp \
+    horizontalchartwiew.cpp \
     main.cpp \
     piechart.cpp \
     titanic.cpp \
@@ -17,6 +19,8 @@ SOURCES += \
      abstractchartview.cpp
 
 HEADERS += \
+    barchartview.h \
+    horizontalchartwiew.h \
     piechart.h \
     titanic.h \
     passenger.h \

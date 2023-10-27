@@ -16,3 +16,18 @@ int Passenger::getSexe() const
 {
     return sexe;
 }
+
+int Passenger::getClasse() const
+{
+    return classe;
+}
+
+int Passenger::getSurvived() const
+{
+    return survived;
+}
+
+int Passenger::getAge() const
+{
+    return age;
+}

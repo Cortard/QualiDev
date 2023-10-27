@@ -28,23 +28,37 @@
      <string>Graphique</string>
     </property>
     <addaction name="actionRatio_H_F"/>
-    <addaction name="actionCat_gorie"/>
-    <addaction name="action_ge_Cat_gorie"/>
+    <addaction name="actionCategorie"/>
+    <addaction name="actionAgeCategorie"/>
    </widget>
    <addaction name="menuGraphique"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionRatio_H_F"/>
+   <addaction name="actionCategorie"/>
+   <addaction name="actionAgeCategorie"/>
+  </widget>
   <action name="actionRatio_H_F">
    <property name="text">
     <string>Ratio H/F</string>
    </property>
   </action>
-  <action name="actionCat_gorie">
+  <action name="actionCategorie">
    <property name="text">
     <string>Catégorie</string>
    </property>
   </action>
-  <action name="action_ge_Cat_gorie">
+  <action name="actionAgeCategorie">
    <property name="text">
     <string>Âge/Catégorie</string>
    </property>
