@@ -1,6 +1,7 @@
 #include "titanic.h"
 
 #include <QApplication>
+#include <QDir>
 #include "data.h"
 
 /**
@@ -12,7 +13,7 @@
 int main(int argc, char *argv[])
 {
     Data* data = new Data;
-    data->readData();
+    qDebug()<<data->readData(QDir::currentPath()+"/../titanic/titanic.dbf");
     QApplication a(argc, argv);
     Titanic w(data);
     w.show();

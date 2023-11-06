@@ -8,9 +8,14 @@ Data::Data()
 
 }
 
-bool Data::readData()
+bool Data::readData(QString path)
 {
-    QFile file(QDir::currentPath()+"/../titanic/titanic.dbf");
+
+    QList<QString> extensions={".dbf"};
+    if(!verifExtension(path,extensions))
+        return false;
+
+    QFile file(path);
     if (! file.open(QIODevice::ReadOnly | QIODevice::Text)){
         return false;
     }
@@ -31,4 +36,11 @@ bool Data::readData()
         return false;
     }
     return true;
+}
+
+bool Data::verifExtension(QString path, QList<QString> extension)
+{
+    for(QString type : extension)
+        if(path.contains(type)) return true;
+    return false;
 }
