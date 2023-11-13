@@ -2,6 +2,11 @@
 \hypertarget{class_view_histogram}{}\label{class_view_histogram}\index{ViewHistogram@{ViewHistogram}}
 
 
+The \doxylink{class_view_histogram}{View\+Histogram} class, classe de vue pour le graphique en barre, obvservateur.  
+
+
+
+
 {\ttfamily \#include $<$view\+Histogram.\+h$>$}
 
 Inheritance diagram for View\+Histogram\+:\begin{figure}[H]
@@ -14,15 +19,18 @@ Inheritance diagram for View\+Histogram\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_view_histogram_ab87cc5480ea6cf6ec9afbe6e68717220}{View\+Histogram}} (\mbox{\hyperlink{class_promotion}{Promotion}} \texorpdfstring{$\ast$}{*}promotion, QGroup\+Box \texorpdfstring{$\ast$}{*}box)
-\item 
+\begin{DoxyCompactList}\small\item\em \doxylink{class_view_histogram}{View\+Histogram} constructeur. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_view_histogram_ad511f20b12e31f37648d02cef8e16b14}{refresh}} () override
-\begin{DoxyCompactList}\small\item\em refresh fonction virtuelle, fonction appelé par l\textquotesingle{}observé \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em refresh fonction appeler par l\textquotesingle{}observateur, refresh la vue \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_observer}{Observer}}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_observer_a19c43f80a38a332a6f694783df3c9835}{Observer}} ()
 \begin{DoxyCompactList}\small\item\em \doxylink{class_observer}{Observer} constructeur. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_view_histogram}{View\+Histogram} class, classe de vue pour le graphique en barre, obvservateur. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_view_histogram_ab87cc5480ea6cf6ec9afbe6e68717220}\label{class_view_histogram_ab87cc5480ea6cf6ec9afbe6e68717220} 
@@ -31,6 +39,17 @@ void \mbox{\hyperlink{class_view_histogram_ad511f20b12e31f37648d02cef8e16b14}{re
 \doxysubsubsection{\texorpdfstring{ViewHistogram()}{ViewHistogram()}}
 {\footnotesize\ttfamily View\+Histogram\+::\+View\+Histogram (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_promotion}{Promotion}} \texorpdfstring{$\ast$}{*}}]{promotion,  }\item[{QGroup\+Box \texorpdfstring{$\ast$}{*}}]{box }\end{DoxyParamCaption})}
 
+
+
+\doxylink{class_view_histogram}{View\+Histogram} constructeur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em promotion} & pointeur vers les donnees \\
+\hline
+{\em box} & pointeur vers la box qui doit contenir le graphique \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}
@@ -42,7 +61,7 @@ void \mbox{\hyperlink{class_view_histogram_ad511f20b12e31f37648d02cef8e16b14}{re
 
 
 
-refresh fonction virtuelle, fonction appelé par l\textquotesingle{}observé 
+refresh fonction appeler par l\textquotesingle{}observateur, refresh la vue 
 
 
 

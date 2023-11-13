@@ -2,6 +2,11 @@
 \hypertarget{class_view_forms_delete}{}\label{class_view_forms_delete}\index{ViewFormsDelete@{ViewFormsDelete}}
 
 
+The \doxylink{class_view_forms}{View\+Forms} class, classe de vue pour le formulaire de suppretion, obvservateur.  
+
+
+
+
 {\ttfamily \#include $<$viewformsdelete.\+h$>$}
 
 Inheritance diagram for View\+Forms\+Delete\+:\begin{figure}[H]
@@ -14,20 +19,23 @@ Inheritance diagram for View\+Forms\+Delete\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_view_forms_delete_a7ba26329cb57fe1c0582329cf3addd1d}{delete\+Etu}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em delete\+Etu fonction trigger par le formulaire \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_view_forms_delete_a8129ecd2149bd92d0dd24e94bf2d6e2e}{View\+Forms\+Delete}} (\mbox{\hyperlink{class_promotion}{Promotion}} \texorpdfstring{$\ast$}{*}promotion, QLine\+Edit \texorpdfstring{$\ast$}{*}numero)
-\item 
+\begin{DoxyCompactList}\small\item\em \doxylink{class_view_forms_delete}{View\+Forms\+Delete} constructeur. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_view_forms_delete_a6f1dad6fb0eaf4fe37056d92b18d0c26}{refresh}} () override
-\begin{DoxyCompactList}\small\item\em refresh fonction virtuelle, fonction appelé par l\textquotesingle{}observé \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em refresh fonction appeler par l\textquotesingle{}observateur, refresh la vue \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_observer}{Observer}}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_observer_a19c43f80a38a332a6f694783df3c9835}{Observer}} ()
 \begin{DoxyCompactList}\small\item\em \doxylink{class_observer}{Observer} constructeur. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_view_forms}{View\+Forms} class, classe de vue pour le formulaire de suppretion, obvservateur. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_view_forms_delete_a8129ecd2149bd92d0dd24e94bf2d6e2e}\label{class_view_forms_delete_a8129ecd2149bd92d0dd24e94bf2d6e2e} 
@@ -38,12 +46,27 @@ void \mbox{\hyperlink{class_view_forms_delete_a6f1dad6fb0eaf4fe37056d92b18d0c26}
 
 
 
+\doxylink{class_view_forms_delete}{View\+Forms\+Delete} constructeur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em promotion} & pointeur vers les donnees \\
+\hline
+{\em numero} & pointeur vers l\textquotesingle{}entree du numero de l\textquotesingle{}etudiant a supprimer \\
+\hline
+\end{DoxyParams}
+
+
 \doxysubsection{Member Function Documentation}
 \Hypertarget{class_view_forms_delete_a7ba26329cb57fe1c0582329cf3addd1d}\label{class_view_forms_delete_a7ba26329cb57fe1c0582329cf3addd1d} 
 \index{ViewFormsDelete@{ViewFormsDelete}!deleteEtu@{deleteEtu}}
 \index{deleteEtu@{deleteEtu}!ViewFormsDelete@{ViewFormsDelete}}
 \doxysubsubsection{\texorpdfstring{deleteEtu}{deleteEtu}}
 {\footnotesize\ttfamily void View\+Forms\+Delete\+::delete\+Etu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+delete\+Etu fonction trigger par le formulaire 
 
 \Hypertarget{class_view_forms_delete_a6f1dad6fb0eaf4fe37056d92b18d0c26}\label{class_view_forms_delete_a6f1dad6fb0eaf4fe37056d92b18d0c26} 
 \index{ViewFormsDelete@{ViewFormsDelete}!refresh@{refresh}}
@@ -53,7 +76,7 @@ void \mbox{\hyperlink{class_view_forms_delete_a6f1dad6fb0eaf4fe37056d92b18d0c26}
 
 
 
-refresh fonction virtuelle, fonction appelé par l\textquotesingle{}observé 
+refresh fonction appeler par l\textquotesingle{}observateur, refresh la vue 
 
 
 

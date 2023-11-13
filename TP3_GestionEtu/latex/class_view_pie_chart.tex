@@ -2,7 +2,7 @@
 \hypertarget{class_view_pie_chart}{}\label{class_view_pie_chart}\index{ViewPieChart@{ViewPieChart}}
 
 
-Class to manage the Pie\+Chart View.  
+The \doxylink{class_view_forms}{View\+Forms} class, classe de vue pour le graphique en camembert, obvservateur.  
 
 
 
@@ -19,9 +19,9 @@ Inheritance diagram for View\+Pie\+Chart\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_view_pie_chart_aa888f85fe82f7ae0bf81728a869c2d6f}{View\+Pie\+Chart}} (\mbox{\hyperlink{class_promotion}{Promotion}} \texorpdfstring{$\ast$}{*}promotion, QGroup\+Box \texorpdfstring{$\ast$}{*}box)
-\item 
+\begin{DoxyCompactList}\small\item\em \doxylink{class_view_pie_chart}{View\+Pie\+Chart} constructeur. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_view_pie_chart_aa005e74fa117f352f982e2e17716a6a4}{refresh}} () override
-\begin{DoxyCompactList}\small\item\em refresh fonction virtuelle, fonction appelé par l\textquotesingle{}observé \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em refresh fonction appeler par l\textquotesingle{}observateur, refresh la vue \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_observer}{Observer}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -30,12 +30,7 @@ void \mbox{\hyperlink{class_view_pie_chart_aa005e74fa117f352f982e2e17716a6a4}{re
 
 
 \doxysubsection{Detailed Description}
-Class to manage the Pie\+Chart View. 
-
-\begin{DoxyAuthor}{Author}
-Adrien Peytavie 
-\end{DoxyAuthor}
-
+The \doxylink{class_view_forms}{View\+Forms} class, classe de vue pour le graphique en camembert, obvservateur. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_view_pie_chart_aa888f85fe82f7ae0bf81728a869c2d6f}\label{class_view_pie_chart_aa888f85fe82f7ae0bf81728a869c2d6f} 
@@ -44,6 +39,17 @@ Adrien Peytavie
 \doxysubsubsection{\texorpdfstring{ViewPieChart()}{ViewPieChart()}}
 {\footnotesize\ttfamily View\+Pie\+Chart\+::\+View\+Pie\+Chart (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_promotion}{Promotion}} \texorpdfstring{$\ast$}{*}}]{promotion,  }\item[{QGroup\+Box \texorpdfstring{$\ast$}{*}}]{box }\end{DoxyParamCaption})}
 
+
+
+\doxylink{class_view_pie_chart}{View\+Pie\+Chart} constructeur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em promotion} & pointeur vers les donnees \\
+\hline
+{\em box} & pointeur vers la box qui doit contenir le graphique \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}
@@ -55,7 +61,7 @@ Adrien Peytavie
 
 
 
-refresh fonction virtuelle, fonction appelé par l\textquotesingle{}observé 
+refresh fonction appeler par l\textquotesingle{}observateur, refresh la vue 
 
 
 

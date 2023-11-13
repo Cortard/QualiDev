@@ -43,8 +43,6 @@ private:
 public:
     /**
      * @brief ViewForms constructeur
-     * @param promotion pointeur vers les donnees
-     * @param numero pointeur vers l'entree du numero
      * @param prenom pointeur vers l'entree du prenom
      * @param nom  pointeur vers l'entree du nom
      * @param departement pointeur vers l'entree du departement

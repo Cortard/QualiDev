@@ -2,7 +2,7 @@
 \hypertarget{class_view_list}{}\label{class_view_list}\index{ViewList@{ViewList}}
 
 
-Class to manage the QList\+Widget.  
+The \doxylink{class_view_list}{View\+List} class, classe de vue pour la liste, observable.  
 
 
 
@@ -19,14 +19,14 @@ Inheritance diagram for View\+List\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_view_list_ac94c3066e53ee6547f1b0bf1678f79b5}{delete\+Etu}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em delete\+Etu fonction trigger par le bouton sous la liste \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_view_list_a6cad2317662483a627d8f2722a7c3f59}{View\+List}} (\mbox{\hyperlink{class_promotion}{Promotion}} \texorpdfstring{$\ast$}{*}promotion, QList\+Widget \texorpdfstring{$\ast$}{*}list\+View)
-\item 
+\begin{DoxyCompactList}\small\item\em \doxylink{class_view_list}{View\+List} constructeur. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_view_list_aa8fcc77e5f22095dfb70def5ee90a1c5}{refresh}} () override
-\begin{DoxyCompactList}\small\item\em refresh fonction virtuelle, fonction appelé par l\textquotesingle{}observé \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em refresh fonction appeler par l\textquotesingle{}observateur, refresh la vue \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_observer}{Observer}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -35,12 +35,7 @@ void \mbox{\hyperlink{class_view_list_aa8fcc77e5f22095dfb70def5ee90a1c5}{refresh
 
 
 \doxysubsection{Detailed Description}
-Class to manage the QList\+Widget. 
-
-\begin{DoxyAuthor}{Author}
-Adrien Peytavie 
-\end{DoxyAuthor}
-
+The \doxylink{class_view_list}{View\+List} class, classe de vue pour la liste, observable. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_view_list_a6cad2317662483a627d8f2722a7c3f59}\label{class_view_list_a6cad2317662483a627d8f2722a7c3f59} 
@@ -51,12 +46,27 @@ Adrien Peytavie
 
 
 
+\doxylink{class_view_list}{View\+List} constructeur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em promotion} & pointeur vers les donnees \\
+\hline
+{\em list\+View} & pointeur vers la liste ou afficher les donnes \\
+\hline
+\end{DoxyParams}
+
+
 \doxysubsection{Member Function Documentation}
 \Hypertarget{class_view_list_ac94c3066e53ee6547f1b0bf1678f79b5}\label{class_view_list_ac94c3066e53ee6547f1b0bf1678f79b5} 
 \index{ViewList@{ViewList}!deleteEtu@{deleteEtu}}
 \index{deleteEtu@{deleteEtu}!ViewList@{ViewList}}
 \doxysubsubsection{\texorpdfstring{deleteEtu}{deleteEtu}}
 {\footnotesize\ttfamily void View\+List\+::delete\+Etu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+delete\+Etu fonction trigger par le bouton sous la liste 
 
 \Hypertarget{class_view_list_aa8fcc77e5f22095dfb70def5ee90a1c5}\label{class_view_list_aa8fcc77e5f22095dfb70def5ee90a1c5} 
 \index{ViewList@{ViewList}!refresh@{refresh}}
@@ -66,7 +76,7 @@ Adrien Peytavie
 
 
 
-refresh fonction virtuelle, fonction appelé par l\textquotesingle{}observé 
+refresh fonction appeler par l\textquotesingle{}observateur, refresh la vue 
 
 
 
