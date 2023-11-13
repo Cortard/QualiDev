@@ -23,6 +23,8 @@ SRCDIR=TP3_GestionEtu
 HEADERS = \
    TP3_GestionEtu.h \
    controller.h \
+   controlleradd.h \
+   controllercreator.h \
    controllerdelete.h \
    observable.h \
    observer.h \
@@ -31,11 +33,14 @@ HEADERS = \
    viewForms.h \
    viewHistogram.h \
    viewList.h \
-   viewPieChart.h
+   viewPieChart.h \
+   viewformsdelete.h
 
 SOURCES = \
    TP3_GestionEtu.cpp \
    controller.cpp \
+   controlleradd.cpp \
+   controllercreator.cpp \
    controllerdelete.cpp \
    main.cpp \
    observable.cpp \
@@ -45,7 +50,8 @@ SOURCES = \
    viewForms.cpp \
    viewHistogram.cpp \
    viewList.cpp \
-   viewPieChart.cpp
+   viewPieChart.cpp \
+   viewformsdelete.cpp
 
 FORMS += \
     $$PWD/TP3_GestionEtu.ui

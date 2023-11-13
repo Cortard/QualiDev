@@ -1,46 +1,19 @@
 #include "controllerdelete.h"
 
-ControllerDelete::ControllerDelete()
-{
-
-}
-
-ControllerDelete::ControllerDelete(Promotion *data) : Controller(data)
+ControllerDelete::ControllerDelete(Promotion *data, QStringList* input) : Controller(data,input)
 {}
 
-bool ControllerDelete::deleteEtu(int etudiant)
+int ControllerDelete::action()
 {
-    if(!exist(etudiant)) return false;
-    Student* aSupp;
-    for(Student* student : data->students)
-        if(student->getNumero()==etudiant){
-            aSupp=student;
-            break;
-        }
-
-    data->students.removeOne(aSupp);
-    delete aSupp;
-
-    data->notify();
-
-    return true;
-}
-
-bool ControllerDelete::deleteEtu(QStringList etudiants)
-{
-    for(QString etudiant : etudiants){
-        if(!exist(etudiant)) return false;
-        Student* aSupp;
-        for(Student* student : data->students)
-            if(student->toQstring()==etudiant){
-                aSupp=student;
-                break;
-            }
-
-        data->students.removeOne(aSupp);
-        delete aSupp;
+    int cpt=0;
+    for(QString etudiant : *input){
+        int rank=data->exist(etudiant);
+        if(rank==-1) continue;
+        data->deleteEtu(rank, 0);
+        ++cpt;
     }
     data->notify();
 
-    return true;
+    return cpt;
 }
+

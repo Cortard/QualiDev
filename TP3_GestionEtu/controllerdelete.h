@@ -6,10 +6,9 @@
 class ControllerDelete : public Controller
 {
 public:
-    ControllerDelete();
-    ControllerDelete(Promotion *data);
-    bool deleteEtu(int etudiant);
-    bool deleteEtu(QStringList etudiants);
+    ControllerDelete(Promotion *data, QStringList* input);
+    int action() override;
+    ~ControllerDelete(){};
 };
 
 #endif // CONTROLLERDELETE_H

@@ -7,12 +7,11 @@ class Controller
 {
 protected:
     Promotion* data;
+    QStringList* input;
 public:
-    Controller();
-    Controller(Promotion *data);
-
-    bool exist(int etudiant);
-    bool exist(QString etudiant);
+    Controller(Promotion *data, QStringList* input);
+    virtual int action()=0;
+    virtual ~Controller(){};
 };
 
 #endif // CONTROLLER_H

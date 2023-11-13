@@ -1,27 +1,22 @@
 #include "viewList.h"
 
 #include <QStringListModel>
-#include "controllerdelete.h"
-
-ViewList::ViewList()
-{
-}
-
+#include "controllercreator.h"
 
 ViewList::ViewList(Promotion *promotion, QListWidget *listView) : promotion(promotion),
     listView(listView)
 {
-    refresh();
 }
 
 void ViewList::deleteEtu()
 {
-    ControllerDelete* controller = new ControllerDelete(promotion);
+
     QStringList list;
     for(auto item : listView->selectedItems())
         list<<item->text();
+    Controller* controller = ControllerCreator::Controller(promotion, &list);
 
-    controller->deleteEtu(list);
+    controller->action();
     delete controller;
 }
 

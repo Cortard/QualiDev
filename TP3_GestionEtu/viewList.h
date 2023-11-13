@@ -16,10 +16,10 @@ private:
     Promotion* promotion;
     QListWidget* listView;
 
-    virtual void refresh();
 public:
-    ViewList();
     ViewList(Promotion *promotion, QListWidget *listView);
+    void refresh() override;
+
 public slots:
     void deleteEtu();
 };
