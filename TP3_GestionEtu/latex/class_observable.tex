@@ -1,0 +1,94 @@
+\doxysection{Observable Class Reference}
+\hypertarget{class_observable}{}\label{class_observable}\index{Observable@{Observable}}
+
+
+The \doxylink{class_observable}{Observable} class, class du design pattern observateur, observable.  
+
+
+
+
+{\ttfamily \#include $<$observable.\+h$>$}
+
+Inheritance diagram for Observable\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_observable}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_observable_af823886c69aa77b313c1d44b59fd7957}{Observable}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{class_observable}{Observable} constructeur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_observable_a4207ba1550f83ce348e2fcac33d069e5}{add\+Observeur}} (\mbox{\hyperlink{class_observer}{Observer}} \texorpdfstring{$\ast$}{*}observeur)
+\begin{DoxyCompactList}\small\item\em add\+Observeur ajoute un observateur a la liste \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_observable_a099bf851e05bb8c1a25e83f2a1389e58}{notify}} ()
+\begin{DoxyCompactList}\small\item\em notify appel la fonction refresh de tout les abonnes \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+QList$<$ \mbox{\hyperlink{class_observer}{Observer}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_observable_a66688252427703b33058c56f2959dd10}{observeurs}}
+\begin{DoxyCompactList}\small\item\em observeurs listes des pointeurs vers les obsevateurs \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_observable}{Observable} class, class du design pattern observateur, observable. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_observable_af823886c69aa77b313c1d44b59fd7957}\label{class_observable_af823886c69aa77b313c1d44b59fd7957} 
+\index{Observable@{Observable}!Observable@{Observable}}
+\index{Observable@{Observable}!Observable@{Observable}}
+\doxysubsubsection{\texorpdfstring{Observable()}{Observable()}}
+{\footnotesize\ttfamily Observable\+::\+Observable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_observable}{Observable} constructeur. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_observable_a4207ba1550f83ce348e2fcac33d069e5}\label{class_observable_a4207ba1550f83ce348e2fcac33d069e5} 
+\index{Observable@{Observable}!addObserveur@{addObserveur}}
+\index{addObserveur@{addObserveur}!Observable@{Observable}}
+\doxysubsubsection{\texorpdfstring{addObserveur()}{addObserveur()}}
+{\footnotesize\ttfamily void Observable\+::add\+Observeur (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_observer}{Observer}} \texorpdfstring{$\ast$}{*}}]{observeur }\end{DoxyParamCaption})}
+
+
+
+add\+Observeur ajoute un observateur a la liste 
+
+
+\begin{DoxyParams}{Parameters}
+{\em observeur} & adresse le l\textquotesingle{}observateur \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_observable_a099bf851e05bb8c1a25e83f2a1389e58}\label{class_observable_a099bf851e05bb8c1a25e83f2a1389e58} 
+\index{Observable@{Observable}!notify@{notify}}
+\index{notify@{notify}!Observable@{Observable}}
+\doxysubsubsection{\texorpdfstring{notify()}{notify()}}
+{\footnotesize\ttfamily void Observable\+::notify (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+notify appel la fonction refresh de tout les abonnes 
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_observable_a66688252427703b33058c56f2959dd10}\label{class_observable_a66688252427703b33058c56f2959dd10} 
+\index{Observable@{Observable}!observeurs@{observeurs}}
+\index{observeurs@{observeurs}!Observable@{Observable}}
+\doxysubsubsection{\texorpdfstring{observeurs}{observeurs}}
+{\footnotesize\ttfamily QList$<$\mbox{\hyperlink{class_observer}{Observer}}\texorpdfstring{$\ast$}{*}$>$ Observable\+::observeurs\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+observeurs listes des pointeurs vers les obsevateurs 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{observable_8h}{observable.\+h}}\item 
+\mbox{\hyperlink{observable_8cpp}{observable.\+cpp}}\end{DoxyCompactItemize}

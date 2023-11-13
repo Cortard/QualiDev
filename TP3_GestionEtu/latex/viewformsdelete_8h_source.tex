@@ -1,0 +1,30 @@
+\doxysection{viewformsdelete.\+h}
+\hypertarget{viewformsdelete_8h_source}{}\label{viewformsdelete_8h_source}\mbox{\hyperlink{viewformsdelete_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ VIEWFORMSDELETE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ VIEWFORMSDELETE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{observer_8h}{observer.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{promotion_8h}{promotion.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QLineEdit>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_view_forms_delete}{ViewFormsDelete}}\ \ :\ \textcolor{keyword}{public}\ QObject,\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_observer}{Observer}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00013\ private\ :}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{class_promotion}{Promotion}}*\ promotion;}
+\DoxyCodeLine{00015\ \ \ \ \ QLineEdit*\ numero;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_view_forms_delete}{ViewFormsDelete}}(\mbox{\hyperlink{class_promotion}{Promotion}}\ *promotion,\ QLineEdit\ *numero);}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_view_forms_delete_a6f1dad6fb0eaf4fe37056d92b18d0c26}{refresh}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_view_forms_delete_a7ba26329cb57fe1c0582329cf3addd1d}{deleteEtu}}();}
+\DoxyCodeLine{00023\ \};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ VIEWFORMSDELETE\_H}}
+
+\end{DoxyCode}

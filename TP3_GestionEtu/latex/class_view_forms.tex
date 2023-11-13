@@ -1,0 +1,98 @@
+\doxysection{View\+Forms Class Reference}
+\hypertarget{class_view_forms}{}\label{class_view_forms}\index{ViewForms@{ViewForms}}
+
+
+The \doxylink{class_view_forms}{View\+Forms} class, classe de vue pour le formulaire d\textquotesingle{}ajout, obvservateur.  
+
+
+
+
+{\ttfamily \#include $<$view\+Forms.\+h$>$}
+
+Inheritance diagram for View\+Forms\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_view_forms}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_view_forms_ad09e1c9fbd953bdaee5cb6f137cfc1cf}{add\+Etu}} ()
+\begin{DoxyCompactList}\small\item\em add\+Etu fonction trigger par le formulaire \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_view_forms_ae38c5bf8c528600215bb5691a13a2d4e}{View\+Forms}} (\mbox{\hyperlink{class_promotion}{Promotion}} \texorpdfstring{$\ast$}{*}promotion, QLine\+Edit \texorpdfstring{$\ast$}{*}numero, QLine\+Edit \texorpdfstring{$\ast$}{*}prenom, QLine\+Edit \texorpdfstring{$\ast$}{*}nom, QCombo\+Box \texorpdfstring{$\ast$}{*}departement, QCombo\+Box \texorpdfstring{$\ast$}{*}bac)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_view_forms}{View\+Forms} constructeur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_view_forms_adc151fa33b4f99b90698000bcc92df92}{refresh}} () override
+\begin{DoxyCompactList}\small\item\em refresh fonction appeler par l\textquotesingle{}observateur, refresh la vue \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_observer}{Observer}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_observer_a19c43f80a38a332a6f694783df3c9835}{Observer}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{class_observer}{Observer} constructeur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_view_forms}{View\+Forms} class, classe de vue pour le formulaire d\textquotesingle{}ajout, obvservateur. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_view_forms_ae38c5bf8c528600215bb5691a13a2d4e}\label{class_view_forms_ae38c5bf8c528600215bb5691a13a2d4e} 
+\index{ViewForms@{ViewForms}!ViewForms@{ViewForms}}
+\index{ViewForms@{ViewForms}!ViewForms@{ViewForms}}
+\doxysubsubsection{\texorpdfstring{ViewForms()}{ViewForms()}}
+{\footnotesize\ttfamily View\+Forms\+::\+View\+Forms (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_promotion}{Promotion}} \texorpdfstring{$\ast$}{*}}]{promotion,  }\item[{QLine\+Edit \texorpdfstring{$\ast$}{*}}]{numero,  }\item[{QLine\+Edit \texorpdfstring{$\ast$}{*}}]{prenom,  }\item[{QLine\+Edit \texorpdfstring{$\ast$}{*}}]{nom,  }\item[{QCombo\+Box \texorpdfstring{$\ast$}{*}}]{departement,  }\item[{QCombo\+Box \texorpdfstring{$\ast$}{*}}]{bac }\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_view_forms}{View\+Forms} constructeur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em promotion} & pointeur vers les donnees \\
+\hline
+{\em numero} & pointeur vers l\textquotesingle{}entree du numero \\
+\hline
+{\em prenom} & pointeur vers l\textquotesingle{}entree du prenom \\
+\hline
+{\em nom} & pointeur vers l\textquotesingle{}entree du nom \\
+\hline
+{\em departement} & pointeur vers l\textquotesingle{}entree du departement \\
+\hline
+{\em bac} & pointeur vers l\textquotesingle{}entree du bac \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_view_forms_ad09e1c9fbd953bdaee5cb6f137cfc1cf}\label{class_view_forms_ad09e1c9fbd953bdaee5cb6f137cfc1cf} 
+\index{ViewForms@{ViewForms}!addEtu@{addEtu}}
+\index{addEtu@{addEtu}!ViewForms@{ViewForms}}
+\doxysubsubsection{\texorpdfstring{addEtu}{addEtu}}
+{\footnotesize\ttfamily void View\+Forms\+::add\+Etu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+add\+Etu fonction trigger par le formulaire 
+
+\Hypertarget{class_view_forms_adc151fa33b4f99b90698000bcc92df92}\label{class_view_forms_adc151fa33b4f99b90698000bcc92df92} 
+\index{ViewForms@{ViewForms}!refresh@{refresh}}
+\index{refresh@{refresh}!ViewForms@{ViewForms}}
+\doxysubsubsection{\texorpdfstring{refresh()}{refresh()}}
+{\footnotesize\ttfamily void View\+Forms\+::refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+refresh fonction appeler par l\textquotesingle{}observateur, refresh la vue 
+
+
+
+Implements \mbox{\hyperlink{class_observer_abe6824f7ea1ee45757bf21f7a792bed8}{Observer}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{view_forms_8h}{view\+Forms.\+h}}\item 
+\mbox{\hyperlink{view_forms_8cpp}{view\+Forms.\+cpp}}\end{DoxyCompactItemize}

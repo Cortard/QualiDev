@@ -1,0 +1,23 @@
+\doxysection{observable.\+h}
+\hypertarget{observable_8h_source}{}\label{observable_8h_source}\mbox{\hyperlink{observable_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ OBSERVABLE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ OBSERVABLE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{observer_8h}{observer.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QList>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_observable}{Observable}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00017\ \ \ \ \ QList<Observer*>\ \mbox{\hyperlink{class_observable_a66688252427703b33058c56f2959dd10}{observeurs}};}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_observable_af823886c69aa77b313c1d44b59fd7957}{Observable}}();}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_observable_a4207ba1550f83ce348e2fcac33d069e5}{addObserveur}}(\mbox{\hyperlink{class_observer}{Observer}}*\ observeur);}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_observable_a099bf851e05bb8c1a25e83f2a1389e58}{notify}}();}
+\DoxyCodeLine{00032\ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ OBSERVABLE\_H}}
+
+\end{DoxyCode}

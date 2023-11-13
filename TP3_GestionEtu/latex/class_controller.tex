@@ -1,0 +1,110 @@
+\doxysection{Controller Class Reference}
+\hypertarget{class_controller}{}\label{class_controller}\index{Controller@{Controller}}
+
+
+{\ttfamily \#include $<$controller.\+h$>$}
+
+Inheritance diagram for Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_controller_a4c7240423bf98155cd9bd7467a2360a9}{Controller}} (\mbox{\hyperlink{class_promotion}{Promotion}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_controller_a6387b60fbb6383e0031e85bb6612f3b7}{data}}, QString\+List \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_controller_a9620a0d57b6c93429d0afd5f7d4611be}{input}})
+\begin{DoxyCompactList}\small\item\em \doxylink{class_controller}{Controller} constructeur. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_controller_a3877e5f085085888e4574797bc4b97b6}{action}} ()=0
+\begin{DoxyCompactList}\small\item\em action fonction qui effectue l\textquotesingle{}action specialisé de controller \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_controller_a867c1b386aa6e63d986a01ddaeccea5a}{\texorpdfstring{$\sim$}{\string~}\+Controller}} ()
+\begin{DoxyCompactList}\small\item\em \texorpdfstring{$\sim$}{\string~}\+Controller destructeur virtuelle \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_promotion}{Promotion}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_controller_a6387b60fbb6383e0031e85bb6612f3b7}{data}}
+\begin{DoxyCompactList}\small\item\em data, pointer vers les donnes \end{DoxyCompactList}\item 
+QString\+List \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_controller_a9620a0d57b6c93429d0afd5f7d4611be}{input}}
+\begin{DoxyCompactList}\small\item\em input, pointer vers la listes de input \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class \doxylink{class_controller}{Controller}, abstract. Controllers make link between view and data 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_controller_a4c7240423bf98155cd9bd7467a2360a9}\label{class_controller_a4c7240423bf98155cd9bd7467a2360a9} 
+\index{Controller@{Controller}!Controller@{Controller}}
+\index{Controller@{Controller}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{Controller()}{Controller()}}
+{\footnotesize\ttfamily Controller\+::\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_promotion}{Promotion}} \texorpdfstring{$\ast$}{*}}]{data,  }\item[{QString\+List \texorpdfstring{$\ast$}{*}}]{input }\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_controller}{Controller} constructeur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & pointeur vers les données \\
+\hline
+{\em input} & pointeur vers les inputs \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_controller_a867c1b386aa6e63d986a01ddaeccea5a}\label{class_controller_a867c1b386aa6e63d986a01ddaeccea5a} 
+\index{Controller@{Controller}!````~Controller@{\texorpdfstring{$\sim$}{\string~}Controller}}
+\index{````~Controller@{\texorpdfstring{$\sim$}{\string~}Controller}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Controller()}{\string~Controller()}}
+{\footnotesize\ttfamily virtual Controller\+::\texorpdfstring{$\sim$}{\string~}\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\texorpdfstring{$\sim$}{\string~}\+Controller destructeur virtuelle 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_controller_a3877e5f085085888e4574797bc4b97b6}\label{class_controller_a3877e5f085085888e4574797bc4b97b6} 
+\index{Controller@{Controller}!action@{action}}
+\index{action@{action}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{action()}{action()}}
+{\footnotesize\ttfamily virtual int Controller\+::action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+action fonction qui effectue l\textquotesingle{}action specialisé de controller 
+
+\begin{DoxyReturn}{Returns}
+resultat de l\textquotesingle{}action, voir doc particulière 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_controller_add_a66473f3e33c8e48f1d9a514ae025ac28}{Controller\+Add}}, and \mbox{\hyperlink{class_controller_delete_a90f2e97b784fd7f2fddd7866b82d6a8a}{Controller\+Delete}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_controller_a6387b60fbb6383e0031e85bb6612f3b7}\label{class_controller_a6387b60fbb6383e0031e85bb6612f3b7} 
+\index{Controller@{Controller}!data@{data}}
+\index{data@{data}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_promotion}{Promotion}}\texorpdfstring{$\ast$}{*} Controller\+::data\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+data, pointer vers les donnes 
+
+\Hypertarget{class_controller_a9620a0d57b6c93429d0afd5f7d4611be}\label{class_controller_a9620a0d57b6c93429d0afd5f7d4611be} 
+\index{Controller@{Controller}!input@{input}}
+\index{input@{input}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{input}{input}}
+{\footnotesize\ttfamily QString\+List\texorpdfstring{$\ast$}{*} Controller\+::input\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+input, pointer vers la listes de input 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{controller_8h}{controller.\+h}}\item 
+\mbox{\hyperlink{controller_8cpp}{controller.\+cpp}}\end{DoxyCompactItemize}

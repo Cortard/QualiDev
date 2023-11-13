@@ -100,13 +100,11 @@ QBarSeries *Promotion::getNumberByBac()
         stats.insert("bac",0);
 
     for(Student* student : students){
-        qDebug()<<student->getBac();
         ++stats[student->getBac()];
     }
 
     QBarSeries *series = new QBarSeries;
     for(QString bac : bacs){
-        qDebug()<<bac<<stats[bac];
         if(stats[bac]!=0){
             auto set = new QBarSet(bac);
             *set<<stats[bac];

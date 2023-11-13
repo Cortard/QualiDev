@@ -1,0 +1,48 @@
+\doxysection{Controller\+Creator Class Reference}
+\hypertarget{class_controller_creator}{}\label{class_controller_creator}\index{ControllerCreator@{ControllerCreator}}
+
+
+The \doxylink{class_controller_creator}{Controller\+Creator} class, class du design patern factory, cree les controller.  
+
+
+
+
+{\ttfamily \#include $<$controllercreator.\+h$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_controller}{Controller}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_controller_creator_a4471c619f85a68cdaf860d9ea70ec3af}{Controller}} (\mbox{\hyperlink{class_promotion}{Promotion}} \texorpdfstring{$\ast$}{*}data, QString\+List \texorpdfstring{$\ast$}{*}input)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_controller}{Controller} cree le bon controller si input.\+len==1 -\/\texorpdfstring{$>$}{>} \doxylink{class_controller_delete}{Controller\+Delete} si input.\+len==5 et input\mbox{[}3\mbox{]} est un des bacs possible -\/\texorpdfstring{$>$}{>} \doxylink{class_controller_add}{Controller\+Add} sinon -\/\texorpdfstring{$>$}{>} \doxylink{class_controller_delete}{Controller\+Delete}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_controller_creator}{Controller\+Creator} class, class du design patern factory, cree les controller. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_controller_creator_a4471c619f85a68cdaf860d9ea70ec3af}\label{class_controller_creator_a4471c619f85a68cdaf860d9ea70ec3af} 
+\index{ControllerCreator@{ControllerCreator}!Controller@{Controller}}
+\index{Controller@{Controller}!ControllerCreator@{ControllerCreator}}
+\doxysubsubsection{\texorpdfstring{Controller()}{Controller()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_controller}{Controller}} \texorpdfstring{$\ast$}{*} Controller\+Creator\+::\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_promotion}{Promotion}} \texorpdfstring{$\ast$}{*}}]{data,  }\item[{QString\+List \texorpdfstring{$\ast$}{*}}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxylink{class_controller}{Controller} cree le bon controller si input.\+len==1 -\/\texorpdfstring{$>$}{>} \doxylink{class_controller_delete}{Controller\+Delete} si input.\+len==5 et input\mbox{[}3\mbox{]} est un des bacs possible -\/\texorpdfstring{$>$}{>} \doxylink{class_controller_add}{Controller\+Add} sinon -\/\texorpdfstring{$>$}{>} \doxylink{class_controller_delete}{Controller\+Delete}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & pointeur vers les données \\
+\hline
+{\em input} & pointeur vers les inputs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer vers le controller choisi 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{controllercreator_8h}{controllercreator.\+h}}\item 
+\mbox{\hyperlink{controllercreator_8cpp}{controllercreator.\+cpp}}\end{DoxyCompactItemize}

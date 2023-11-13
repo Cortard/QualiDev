@@ -1,0 +1,236 @@
+\doxysection{Promotion Class Reference}
+\hypertarget{class_promotion}{}\label{class_promotion}\index{Promotion@{Promotion}}
+
+
+The \doxylink{class_promotion}{Promotion} class des donnes, observable.  
+
+
+
+
+{\ttfamily \#include $<$promotion.\+h$>$}
+
+Inheritance diagram for Promotion\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_promotion}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_promotion_aa10833a0510fd7fdf3a8b7019ae61531}{Promotion}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{class_promotion}{Promotion} constructeur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_promotion_a2bcd3a9d3ead85b89dc2509b2afe332b}{\texorpdfstring{$\sim$}{\string~}\+Promotion}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{class_promotion}{Promotion} destructeur. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_promotion_a7e8bb8c5034c0b1bf4131638db33ffc0}{load\+File\+CSV}} ()
+\begin{DoxyCompactList}\small\item\em load\+File\+CSV charge les donnees sous forme csv au path \+: ./data/promo\+DUT.csv \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_promotion_a0e35f792eef5d886ddcc0c47925c9a90}{exist}} (int etudiant)
+\begin{DoxyCompactList}\small\item\em exist verifie si un etudiant existe deja \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_promotion_ae41be8c92f624ec0c173bbbc1f504781}{exist}} (QString etudiant)
+\begin{DoxyCompactList}\small\item\em exist verifie si un etudiant existe deja \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_promotion_a4ec6821171dcdce15a15bf0dbf78b4da}{add\+Etu}} (int numero, QString prenom, QString nom, QString bac, QString departement)
+\begin{DoxyCompactList}\small\item\em add\+Etu ajout un etudiant \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_promotion_a5c742a131f68c33b33e30fead4dec3a9}{delete\+Etu}} (int num\+Etu)
+\begin{DoxyCompactList}\small\item\em delete\+Etu surpprime un etudiant \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_promotion_a9dc295b65cd201dc1ef6f9441876f402}{delete\+Etu}} (int rank, bool)
+\begin{DoxyCompactList}\small\item\em delete\+Etu surpprime un etudiant \end{DoxyCompactList}\item 
+QPie\+Series \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_promotion_abbaec61f41dd5dd11cc2237295740762}{get\+Number\+By\+Departement}} ()
+\begin{DoxyCompactList}\small\item\em get\+Number\+By\+Departement renvoi le nombre d\textquotesingle{}etudiant par departement, s\textquotesingle{}il n\textquotesingle{}a aucun etudiant, le departement n\textquotesingle{}es pas cité \end{DoxyCompactList}\item 
+QBar\+Series \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_promotion_aff6e4c78a550b7271a669adf65034595}{get\+Number\+By\+Bac}} ()
+\begin{DoxyCompactList}\small\item\em get\+Number\+By\+Bac renvoi le nombre d\textquotesingle{}etudiant par bac, s\textquotesingle{}il n\textquotesingle{}a aucun etudiant, le bac n\textquotesingle{}es pas cité \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_observable}{Observable}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_observable_af823886c69aa77b313c1d44b59fd7957}{Observable}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{class_observable}{Observable} constructeur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_observable_a4207ba1550f83ce348e2fcac33d069e5}{add\+Observeur}} (\mbox{\hyperlink{class_observer}{Observer}} \texorpdfstring{$\ast$}{*}observeur)
+\begin{DoxyCompactList}\small\item\em add\+Observeur ajoute un observateur a la liste \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_observable_a099bf851e05bb8c1a25e83f2a1389e58}{notify}} ()
+\begin{DoxyCompactList}\small\item\em notify appel la fonction refresh de tout les abonnes \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+QList$<$ \mbox{\hyperlink{class_student}{Student}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_promotion_af62c323cc1293d9fa2bda031acb2f554}{students}}
+\begin{DoxyCompactList}\small\item\em students liste des etudiants \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_observable}{Observable}}}
+\begin{DoxyCompactItemize}
+\item 
+QList$<$ \mbox{\hyperlink{class_observer}{Observer}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_observable_a66688252427703b33058c56f2959dd10}{observeurs}}
+\begin{DoxyCompactList}\small\item\em observeurs listes des pointeurs vers les obsevateurs \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_promotion}{Promotion} class des donnes, observable. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_promotion_aa10833a0510fd7fdf3a8b7019ae61531}\label{class_promotion_aa10833a0510fd7fdf3a8b7019ae61531} 
+\index{Promotion@{Promotion}!Promotion@{Promotion}}
+\index{Promotion@{Promotion}!Promotion@{Promotion}}
+\doxysubsubsection{\texorpdfstring{Promotion()}{Promotion()}}
+{\footnotesize\ttfamily Promotion\+::\+Promotion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_promotion}{Promotion} constructeur. 
+
+\Hypertarget{class_promotion_a2bcd3a9d3ead85b89dc2509b2afe332b}\label{class_promotion_a2bcd3a9d3ead85b89dc2509b2afe332b} 
+\index{Promotion@{Promotion}!````~Promotion@{\texorpdfstring{$\sim$}{\string~}Promotion}}
+\index{````~Promotion@{\texorpdfstring{$\sim$}{\string~}Promotion}!Promotion@{Promotion}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Promotion()}{\string~Promotion()}}
+{\footnotesize\ttfamily Promotion\+::\texorpdfstring{$\sim$}{\string~}\+Promotion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_promotion}{Promotion} destructeur. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_promotion_a4ec6821171dcdce15a15bf0dbf78b4da}\label{class_promotion_a4ec6821171dcdce15a15bf0dbf78b4da} 
+\index{Promotion@{Promotion}!addEtu@{addEtu}}
+\index{addEtu@{addEtu}!Promotion@{Promotion}}
+\doxysubsubsection{\texorpdfstring{addEtu()}{addEtu()}}
+{\footnotesize\ttfamily void Promotion\+::add\+Etu (\begin{DoxyParamCaption}\item[{int}]{numero,  }\item[{QString}]{prenom,  }\item[{QString}]{nom,  }\item[{QString}]{bac,  }\item[{QString}]{departement }\end{DoxyParamCaption})}
+
+
+
+add\+Etu ajout un etudiant 
+
+
+\begin{DoxyParams}{Parameters}
+{\em numero} & nouveau numero de l\textquotesingle{}etudiant \\
+\hline
+{\em prenom} & prenom de l\textquotesingle{}etudiant \\
+\hline
+{\em nom} & nom de l\textquotesingle{}etudiant \\
+\hline
+{\em bac} & type du bac de l\textquotesingle{}etudiant \\
+\hline
+{\em departement} & departement de l\textquotesingle{}etudiant \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_promotion_a5c742a131f68c33b33e30fead4dec3a9}\label{class_promotion_a5c742a131f68c33b33e30fead4dec3a9} 
+\index{Promotion@{Promotion}!deleteEtu@{deleteEtu}}
+\index{deleteEtu@{deleteEtu}!Promotion@{Promotion}}
+\doxysubsubsection{\texorpdfstring{deleteEtu()}{deleteEtu()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Promotion\+::delete\+Etu (\begin{DoxyParamCaption}\item[{int}]{num\+Etu }\end{DoxyParamCaption})}
+
+
+
+delete\+Etu surpprime un etudiant 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Etu} & numero de l\textquotesingle{}etudiant \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_promotion_a9dc295b65cd201dc1ef6f9441876f402}\label{class_promotion_a9dc295b65cd201dc1ef6f9441876f402} 
+\index{Promotion@{Promotion}!deleteEtu@{deleteEtu}}
+\index{deleteEtu@{deleteEtu}!Promotion@{Promotion}}
+\doxysubsubsection{\texorpdfstring{deleteEtu()}{deleteEtu()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Promotion\+::delete\+Etu (\begin{DoxyParamCaption}\item[{int}]{rank,  }\item[{bool}]{ }\end{DoxyParamCaption})}
+
+
+
+delete\+Etu surpprime un etudiant 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rank} & rang de l\textquotesingle{}etudiant dans la liste des donnes \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_promotion_a0e35f792eef5d886ddcc0c47925c9a90}\label{class_promotion_a0e35f792eef5d886ddcc0c47925c9a90} 
+\index{Promotion@{Promotion}!exist@{exist}}
+\index{exist@{exist}!Promotion@{Promotion}}
+\doxysubsubsection{\texorpdfstring{exist()}{exist()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Promotion\+::exist (\begin{DoxyParamCaption}\item[{int}]{etudiant }\end{DoxyParamCaption})}
+
+
+
+exist verifie si un etudiant existe deja 
+
+
+\begin{DoxyParams}{Parameters}
+{\em etudiant} & numero de l\textquotesingle{}etudiant \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 s\textquotesingle{}il n\textquotesingle{}existe pas, son rang dans la liste des donnes sinon 
+\end{DoxyReturn}
+\Hypertarget{class_promotion_ae41be8c92f624ec0c173bbbc1f504781}\label{class_promotion_ae41be8c92f624ec0c173bbbc1f504781} 
+\index{Promotion@{Promotion}!exist@{exist}}
+\index{exist@{exist}!Promotion@{Promotion}}
+\doxysubsubsection{\texorpdfstring{exist()}{exist()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int Promotion\+::exist (\begin{DoxyParamCaption}\item[{QString}]{etudiant }\end{DoxyParamCaption})}
+
+
+
+exist verifie si un etudiant existe deja 
+
+
+\begin{DoxyParams}{Parameters}
+{\em etudiant} & etudiant.\+to\+Qstring() de l\textquotesingle{}etudiant a chercher \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 s\textquotesingle{}il n\textquotesingle{}existe pas, son rang dans la liste des donnes sinon 
+\end{DoxyReturn}
+\Hypertarget{class_promotion_aff6e4c78a550b7271a669adf65034595}\label{class_promotion_aff6e4c78a550b7271a669adf65034595} 
+\index{Promotion@{Promotion}!getNumberByBac@{getNumberByBac}}
+\index{getNumberByBac@{getNumberByBac}!Promotion@{Promotion}}
+\doxysubsubsection{\texorpdfstring{getNumberByBac()}{getNumberByBac()}}
+{\footnotesize\ttfamily QBar\+Series \texorpdfstring{$\ast$}{*} Promotion\+::get\+Number\+By\+Bac (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+Number\+By\+Bac renvoi le nombre d\textquotesingle{}etudiant par bac, s\textquotesingle{}il n\textquotesingle{}a aucun etudiant, le bac n\textquotesingle{}es pas cité 
+
+\begin{DoxyReturn}{Returns}
+QBar\+Series\texorpdfstring{$\ast$}{*} series pour un diagramme en barre qt 
+\end{DoxyReturn}
+\Hypertarget{class_promotion_abbaec61f41dd5dd11cc2237295740762}\label{class_promotion_abbaec61f41dd5dd11cc2237295740762} 
+\index{Promotion@{Promotion}!getNumberByDepartement@{getNumberByDepartement}}
+\index{getNumberByDepartement@{getNumberByDepartement}!Promotion@{Promotion}}
+\doxysubsubsection{\texorpdfstring{getNumberByDepartement()}{getNumberByDepartement()}}
+{\footnotesize\ttfamily QPie\+Series \texorpdfstring{$\ast$}{*} Promotion\+::get\+Number\+By\+Departement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+Number\+By\+Departement renvoi le nombre d\textquotesingle{}etudiant par departement, s\textquotesingle{}il n\textquotesingle{}a aucun etudiant, le departement n\textquotesingle{}es pas cité 
+
+\begin{DoxyReturn}{Returns}
+QPie\+Series\texorpdfstring{$\ast$}{*} series pour un diagramme camambert qt 
+\end{DoxyReturn}
+\Hypertarget{class_promotion_a7e8bb8c5034c0b1bf4131638db33ffc0}\label{class_promotion_a7e8bb8c5034c0b1bf4131638db33ffc0} 
+\index{Promotion@{Promotion}!loadFileCSV@{loadFileCSV}}
+\index{loadFileCSV@{loadFileCSV}!Promotion@{Promotion}}
+\doxysubsubsection{\texorpdfstring{loadFileCSV()}{loadFileCSV()}}
+{\footnotesize\ttfamily bool Promotion\+::load\+File\+CSV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+load\+File\+CSV charge les donnees sous forme csv au path \+: ./data/promo\+DUT.csv 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_promotion_af62c323cc1293d9fa2bda031acb2f554}\label{class_promotion_af62c323cc1293d9fa2bda031acb2f554} 
+\index{Promotion@{Promotion}!students@{students}}
+\index{students@{students}!Promotion@{Promotion}}
+\doxysubsubsection{\texorpdfstring{students}{students}}
+{\footnotesize\ttfamily QList$<$\mbox{\hyperlink{class_student}{Student}}\texorpdfstring{$\ast$}{*}$>$ Promotion\+::students}
+
+
+
+students liste des etudiants 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{promotion_8h}{promotion.\+h}}\item 
+\mbox{\hyperlink{promotion_8cpp}{promotion.\+cpp}}\end{DoxyCompactItemize}

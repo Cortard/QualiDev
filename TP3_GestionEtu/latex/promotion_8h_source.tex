@@ -1,0 +1,32 @@
+\doxysection{promotion.\+h}
+\hypertarget{promotion_8h_source}{}\label{promotion_8h_source}\mbox{\hyperlink{promotion_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <QBarSeries>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <QList>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <QPieSeries>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{student_8h}{student.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{observable_8h}{observable.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_promotion}{Promotion}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_observable}{Observable}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ QList<Student*>\ \mbox{\hyperlink{class_promotion_af62c323cc1293d9fa2bda031acb2f554}{students}};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_promotion_aa10833a0510fd7fdf3a8b7019ae61531}{Promotion}}();}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_promotion_a2bcd3a9d3ead85b89dc2509b2afe332b}{\string~Promotion}}();}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_promotion_a7e8bb8c5034c0b1bf4131638db33ffc0}{loadFileCSV}}();}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_promotion_a0e35f792eef5d886ddcc0c47925c9a90}{exist}}(\textcolor{keywordtype}{int}\ etudiant);}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_promotion_a0e35f792eef5d886ddcc0c47925c9a90}{exist}}(QString\ etudiant);}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_promotion_a4ec6821171dcdce15a15bf0dbf78b4da}{addEtu}}(\textcolor{keywordtype}{int}\ numero,QString\ prenom,QString\ nom,QString\ bac,QString\ departement);}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_promotion_a5c742a131f68c33b33e30fead4dec3a9}{deleteEtu}}(\textcolor{keywordtype}{int}\ numEtu);}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_promotion_a5c742a131f68c33b33e30fead4dec3a9}{deleteEtu}}(\textcolor{keywordtype}{int}\ rank,\ \textcolor{keywordtype}{bool});}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00070\ \ \ \ \ QPieSeries*\ \mbox{\hyperlink{class_promotion_abbaec61f41dd5dd11cc2237295740762}{getNumberByDepartement}}();}
+\DoxyCodeLine{00075\ \ \ \ \ QBarSeries*\ \mbox{\hyperlink{class_promotion_aff6e4c78a550b7271a669adf65034595}{getNumberByBac}}();}
+\DoxyCodeLine{00076\ \};}
+\DoxyCodeLine{00077\ }
+
+\end{DoxyCode}
