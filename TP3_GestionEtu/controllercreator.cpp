@@ -4,6 +4,7 @@ Controller* ControllerCreator::Controller(Promotion *data, QStringList *input)
 {
     if(input->length()==1)
         return new ControllerDelete(data,input);
+
     if(input->length()==5){
         QStringList bacs;
         bacs<<"S"<<"ES"<<"STI"<<"L"<<"STI"<<"Etr"<<"Autre";
