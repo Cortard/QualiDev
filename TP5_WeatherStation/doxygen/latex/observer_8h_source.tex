@@ -1,0 +1,38 @@
+\doxysection{observer.\+h}
+\hypertarget{observer_8h_source}{}\label{observer_8h_source}\mbox{\hyperlink{observer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ OBSERVER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ OBSERVER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QList>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_observer}{Observer}}\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00011\ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_observer_a37824643eeaef086de17bba2717d865a}{\string~Observer}}()\ =\textcolor{keywordflow}{default};}
+\DoxyCodeLine{00012\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_observer_ac75e4b339faeb3ea6fe0a01bf0b4a215}{update}}()\ =\ 0;}
+\DoxyCodeLine{00013\ \};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_observable}{Observable}}\ \{}
+\DoxyCodeLine{00019\ protected\ :}
+\DoxyCodeLine{00020\ \ \ QList<Observer*>\ \mbox{\hyperlink{class_observable_afe49a6c063fb68ecc764a971e6ccba09}{observants}};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_observable_a42f551d4d64ffa48a2ea8d7f0a4e42d4}{\string~Observable}}()\{}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_observable_afe49a6c063fb68ecc764a971e6ccba09}{observants}}.clear();}
+\DoxyCodeLine{00028\ \ \ \};}
+\DoxyCodeLine{00033\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_observable_a41116955e42a9135cafed2536615576b}{addObserver}}(\mbox{\hyperlink{class_observer}{Observer}}*\ observer)\{}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_observable_afe49a6c063fb68ecc764a971e6ccba09}{observants}}.append(observer);}
+\DoxyCodeLine{00035\ \ \ \};}
+\DoxyCodeLine{00040\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_observable_a01c4105c6a88640eaf2c32e38064e20e}{removeObserver}}(\mbox{\hyperlink{class_observer}{Observer}}*\ observer)\{}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{class_observable_afe49a6c063fb68ecc764a971e6ccba09}{observants}}.removeAll(observer);}
+\DoxyCodeLine{00042\ \ \ \};}
+\DoxyCodeLine{00046\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_observable_afadaf35435e0a66032f8b5468bee30a4}{notifyObserver}}()\{}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordflow}{for}(\mbox{\hyperlink{class_observer}{Observer}}*\ observer\ :\ \mbox{\hyperlink{class_observable_afe49a6c063fb68ecc764a971e6ccba09}{observants}})\{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ observer-\/>update();}
+\DoxyCodeLine{00049\ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \};}
+\DoxyCodeLine{00051\ \};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ OBSERVER\_H}}
+
+\end{DoxyCode}

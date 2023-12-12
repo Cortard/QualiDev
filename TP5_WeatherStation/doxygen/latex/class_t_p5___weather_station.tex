@@ -1,0 +1,112 @@
+\doxysection{TP5\+\_\+\+Weather\+Station Class Reference}
+\hypertarget{class_t_p5___weather_station}{}\label{class_t_p5___weather_station}\index{TP5\_WeatherStation@{TP5\_WeatherStation}}
+
+
+The \doxylink{class_t_p5___weather_station}{TP5\+\_\+\+Weather\+Station} class.  
+
+
+
+
+{\ttfamily \#include $<$TP5\+\_\+\+Weather\+Station.\+h$>$}
+
+Inheritance diagram for TP5\+\_\+\+Weather\+Station\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_t_p5___weather_station}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_t_p5___weather_station_a7ea622e17297329657ae5efa5ec2ca9a}{weather\+Request}} ()
+\begin{DoxyCompactList}\small\item\em weather\+Request make a weather request \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_p5___weather_station_a199b98ef9bdd4b6c553293ed0666b5bc}{air\+Request}} ()
+\begin{DoxyCompactList}\small\item\em air\+Request make an air request \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_p5___weather_station_a762b41a7ac602855aafa06a18efad5bb}{reply\+Finished}} (QNetwork\+Reply \texorpdfstring{$\ast$}{*}reply)
+\begin{DoxyCompactList}\small\item\em reply\+Finished verify the respond of a api request and call the good data reader \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_p5___weather_station_aa0ebe4a086869127b255a910ce78b4a9}{change\+City}} ()
+\begin{DoxyCompactList}\small\item\em change\+City open the change city dialogue and make the api request for the new city lat \& long \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_t_p5___weather_station_a4ed1cc4c1457723b816c84b0776358a0}{TP5\+\_\+\+Weather\+Station}} (\mbox{\hyperlink{class_db_manager}{Db\+Manager}} \texorpdfstring{$\ast$}{*}dbm, QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\item 
+\mbox{\hyperlink{class_t_p5___weather_station_a3a8ec54f56de32fe6359090a1cf3b633}{\texorpdfstring{$\sim$}{\string~}\+TP5\+\_\+\+Weather\+Station}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_t_p5___weather_station}{TP5\+\_\+\+Weather\+Station} class. 
+
+\begin{DoxyAuthor}{Author}
+Fja 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_t_p5___weather_station_a4ed1cc4c1457723b816c84b0776358a0}\label{class_t_p5___weather_station_a4ed1cc4c1457723b816c84b0776358a0} 
+\index{TP5\_WeatherStation@{TP5\_WeatherStation}!TP5\_WeatherStation@{TP5\_WeatherStation}}
+\index{TP5\_WeatherStation@{TP5\_WeatherStation}!TP5\_WeatherStation@{TP5\_WeatherStation}}
+\doxysubsubsection{\texorpdfstring{TP5\_WeatherStation()}{TP5\_WeatherStation()}}
+{\footnotesize\ttfamily TP5\+\_\+\+Weather\+Station\+::\+TP5\+\_\+\+Weather\+Station (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_db_manager}{Db\+Manager}} \texorpdfstring{$\ast$}{*}}]{dbm,  }\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+\Hypertarget{class_t_p5___weather_station_a3a8ec54f56de32fe6359090a1cf3b633}\label{class_t_p5___weather_station_a3a8ec54f56de32fe6359090a1cf3b633} 
+\index{TP5\_WeatherStation@{TP5\_WeatherStation}!````~TP5\_WeatherStation@{\texorpdfstring{$\sim$}{\string~}TP5\_WeatherStation}}
+\index{````~TP5\_WeatherStation@{\texorpdfstring{$\sim$}{\string~}TP5\_WeatherStation}!TP5\_WeatherStation@{TP5\_WeatherStation}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}TP5\_WeatherStation()}{\string~TP5\_WeatherStation()}}
+{\footnotesize\ttfamily TP5\+\_\+\+Weather\+Station\+::\texorpdfstring{$\sim$}{\string~}\+TP5\+\_\+\+Weather\+Station (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_t_p5___weather_station_a199b98ef9bdd4b6c553293ed0666b5bc}\label{class_t_p5___weather_station_a199b98ef9bdd4b6c553293ed0666b5bc} 
+\index{TP5\_WeatherStation@{TP5\_WeatherStation}!airRequest@{airRequest}}
+\index{airRequest@{airRequest}!TP5\_WeatherStation@{TP5\_WeatherStation}}
+\doxysubsubsection{\texorpdfstring{airRequest}{airRequest}}
+{\footnotesize\ttfamily void TP5\+\_\+\+Weather\+Station\+::air\+Request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+air\+Request make an air request 
+
+\Hypertarget{class_t_p5___weather_station_aa0ebe4a086869127b255a910ce78b4a9}\label{class_t_p5___weather_station_aa0ebe4a086869127b255a910ce78b4a9} 
+\index{TP5\_WeatherStation@{TP5\_WeatherStation}!changeCity@{changeCity}}
+\index{changeCity@{changeCity}!TP5\_WeatherStation@{TP5\_WeatherStation}}
+\doxysubsubsection{\texorpdfstring{changeCity}{changeCity}}
+{\footnotesize\ttfamily void TP5\+\_\+\+Weather\+Station\+::change\+City (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+change\+City open the change city dialogue and make the api request for the new city lat \& long 
+
+\Hypertarget{class_t_p5___weather_station_a762b41a7ac602855aafa06a18efad5bb}\label{class_t_p5___weather_station_a762b41a7ac602855aafa06a18efad5bb} 
+\index{TP5\_WeatherStation@{TP5\_WeatherStation}!replyFinished@{replyFinished}}
+\index{replyFinished@{replyFinished}!TP5\_WeatherStation@{TP5\_WeatherStation}}
+\doxysubsubsection{\texorpdfstring{replyFinished}{replyFinished}}
+{\footnotesize\ttfamily void TP5\+\_\+\+Weather\+Station\+::reply\+Finished (\begin{DoxyParamCaption}\item[{QNetwork\+Reply \texorpdfstring{$\ast$}{*}}]{reply }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+reply\+Finished verify the respond of a api request and call the good data reader 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reply} & the api reply \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_p5___weather_station_a7ea622e17297329657ae5efa5ec2ca9a}\label{class_t_p5___weather_station_a7ea622e17297329657ae5efa5ec2ca9a} 
+\index{TP5\_WeatherStation@{TP5\_WeatherStation}!weatherRequest@{weatherRequest}}
+\index{weatherRequest@{weatherRequest}!TP5\_WeatherStation@{TP5\_WeatherStation}}
+\doxysubsubsection{\texorpdfstring{weatherRequest}{weatherRequest}}
+{\footnotesize\ttfamily void TP5\+\_\+\+Weather\+Station\+::weather\+Request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+weather\+Request make a weather request 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_t_p5___weather_station_8h}{TP5\+\_\+\+Weather\+Station.\+h}}\item 
+\mbox{\hyperlink{_t_p5___weather_station_8cpp}{TP5\+\_\+\+Weather\+Station.\+cpp}}\end{DoxyCompactItemize}

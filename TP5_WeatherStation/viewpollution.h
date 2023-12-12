@@ -23,6 +23,9 @@ QT_USE_NAMESPACE
  * @brief The ViewPollution class
  * @author Fja
  */
+/**
+ * @brief The ViewPollution class, gere la vue pollution
+ */
 class ViewPollution : public QObject, public Observer
 {
     Q_OBJECT
@@ -36,6 +39,9 @@ private:
 public:
     ViewPollution(DbManager*, QWidget*, QString* city);
 
+    /**
+     * @brief update update la vue de la pollution
+     */
     void update() override;
 };
 

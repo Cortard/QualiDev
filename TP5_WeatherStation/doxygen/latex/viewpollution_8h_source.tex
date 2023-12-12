@@ -1,0 +1,43 @@
+\doxysection{viewpollution.\+h}
+\hypertarget{viewpollution_8h_source}{}\label{viewpollution_8h_source}\mbox{\hyperlink{viewpollution_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ VIEWPOLLUTION\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ VIEWPOLLUTION\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QWidget>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QValueAxis>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QDateTimeAxis>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QtCharts/QLineSeries>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QtCharts/QChart>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QtCharts/QChartView>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QtCharts/QChartGlobal>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QGridLayout>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{dbmanager_8h}{dbmanager.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{observer_8h}{observer.h}}"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#if\ (QT\_VERSION\ <\ QT\_VERSION\_CHECK(6,\ 0,\ 0))}}
+\DoxyCodeLine{00016\ QT\_CHARTS\_USE\_NAMESPACE}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{comment}{//using\ namespace\ QtCharts;}}
+\DoxyCodeLine{00020\ QT\_USE\_NAMESPACE}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_view_pollution}{ViewPollution}}\ :\ \textcolor{keyword}{public}\ QObject,\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_observer}{Observer}}}
+\DoxyCodeLine{00030\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00032\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_db_manager}{DbManager}}\ *dbm;\ \textcolor{comment}{//>\ DB,\ where\ to\ get\ the\ data\ (dt,aqi)}}
+\DoxyCodeLine{00034\ \ \ \ \ QWidget*\ widget;}
+\DoxyCodeLine{00035\ \ \ \ \ QLineSeries\ *series;\ \textcolor{comment}{//>\ contains\ data\ to\ be\ displayed}}
+\DoxyCodeLine{00036\ \ \ \ \ QDateTimeAxis\ *axisX;\ \textcolor{comment}{//>\ need\ to\ be\ updated\ on\ data\ change}}
+\DoxyCodeLine{00037\ \ \ \ \ QValueAxis*\ axisY;\ \textcolor{comment}{//>\ need\ to\ be\ updated\ on\ data\ change}}
+\DoxyCodeLine{00038\ \ \ \ \ QString*\ city;}
+\DoxyCodeLine{00039\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{class_view_pollution}{ViewPollution}}(\mbox{\hyperlink{class_db_manager}{DbManager}}*,\ QWidget*,\ QString*\ city);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_view_pollution_a5dff60cfdc96898b97e77bb2f0b6c73e}{update}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00046\ \};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ VIEWPOLLUTION\_H}}
+
+\end{DoxyCode}

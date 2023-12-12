@@ -1,0 +1,42 @@
+\doxysection{dbmanager.\+h}
+\hypertarget{dbmanager_8h_source}{}\label{dbmanager_8h_source}\mbox{\hyperlink{dbmanager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DBMANAGER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DBMANAGER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QSqlDatabase>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QJsonObject>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QVector>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{observer_8h}{observer.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_db_manager}{DbManager}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_observable}{Observable}}}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ QSqlDatabase\ sqldb;}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ verifyCityName(QString*\ city);}
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_db_manager}{DbManager}}(\textcolor{keyword}{const}\ QString\&\ path);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{class_db_manager_ac5cdf8e5e932d1681ab807d8f256374c}{\string~DbManager}}();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_db_manager_ac04baba8f5d5197f8bcd9230393501de}{isOpen}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_db_manager_affad4b3fb5d058b6de85800799d2aa68}{createTable}}(QString\ city);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_db_manager_a9c329ccf3da79be4170089b6cd0fde42}{addData}}(\textcolor{keywordtype}{int}\ dt,\ \textcolor{keywordtype}{int}\ aqi,\ QString\ city);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_db_manager_a02de6d28943be80bdeaa6fa161c2ccf2}{removeData}}(\textcolor{keywordtype}{int}\ dt,\ QString\ city);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_db_manager_af711d49ff3d1bbb5fbe9c2f9ddf0924a}{entryExists}}(\textcolor{keywordtype}{int}\ dt,\ QString\ city);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_db_manager_a39c463715a5f0954d5f6d825669f88f7}{printAllData}}(QString\ city);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00085\ \ \ \ \ QList<int*>*\ \mbox{\hyperlink{class_db_manager_a85b8d98df3ffe317b67e2af0ebd62871}{getAllData}}(QString\ city);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_db_manager_a5528faab7e24a4dcb0e3ae0ecf987317}{removeAllData}}(QString\ city);}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DBMANAGER\_H}}
+
+\end{DoxyCode}
