@@ -17,8 +17,9 @@ class ViewReport : public QObject, public Observer
 private:
     WeatherReport *model;   //> model containing temp, localisation
     Ui::TP5_WeatherStationClass* ui;
+    QString* city;
 public:
-    ViewReport(WeatherReport *wreport, Ui::TP5_WeatherStationClass* ui);
+    ViewReport(WeatherReport *wreport, Ui::TP5_WeatherStationClass* ui, QString* city);
 
     void init();
     void update() override;

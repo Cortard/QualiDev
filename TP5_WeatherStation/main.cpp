@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
     if (dbm->isOpen())
     {   // Creates a table if it doesn't exist.
         // Otherwise, use existing table.
-        dbm->createTable();
+        dbm->createTable("bourg-en-bresse");
     }
     else
     {

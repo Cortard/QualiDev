@@ -39,11 +39,22 @@ private:
     ViewReport *reportView;
     ViewPollution *pollutionView;
 
-public slots:
+    double lat,lon;
+    QString city;
+
+    /**
+     * @brief request make a request to the URL. reply is read by void TP5_WeatherStation::replyFinished(QNetworkReply* reply);
+     * @param URL the url to ask
+     */
     void request(QString URL);
+    void weatherReplyFinished(QJsonObject* data);
+    void airReplyFinished(QJsonObject* data);
+    void cityReplyFinished(QJsonDocument* data);
+
+public slots:
     void weatherRequest();
     void airRequest();
     void replyFinished(QNetworkReply* reply);
-    void weatherReplyFinished(QJsonObject* data);
-    void airReplyFinished(QJsonObject* data);
+
+    void changeCity();
 };

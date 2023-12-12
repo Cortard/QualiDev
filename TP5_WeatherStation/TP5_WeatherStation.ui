@@ -36,7 +36,7 @@
        <property name="geometry">
         <rect>
          <x>730</x>
-         <y>50</y>
+         <y>60</y>
          <width>89</width>
          <height>25</height>
         </rect>
@@ -145,7 +145,7 @@
         <rect>
          <x>420</x>
          <y>50</y>
-         <width>221</width>
+         <width>161</width>
          <height>25</height>
         </rect>
        </property>
@@ -153,9 +153,9 @@
       <widget class="QLabel" name="label_8">
        <property name="geometry">
         <rect>
-         <x>660</x>
+         <x>600</x>
          <y>40</y>
-         <width>51</width>
+         <width>111</width>
          <height>41</height>
         </rect>
        </property>
@@ -196,6 +196,19 @@
         </rect>
        </property>
       </widget>
+      <widget class="QPushButton" name="pushButton_city">
+       <property name="geometry">
+        <rect>
+         <x>730</x>
+         <y>30</y>
+         <width>91</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Changer ville</string>
+       </property>
+      </widget>
      </widget>
     </item>
     <item>
@@ -225,7 +238,7 @@
      <x>0</x>
      <y>0</y>
      <width>860</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

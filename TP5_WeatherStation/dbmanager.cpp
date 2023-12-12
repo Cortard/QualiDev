@@ -4,6 +4,13 @@
 #include <QSqlRecord>
 #include <QDebug>
 
+void DbManager::verifyCityName(QString* city){
+    for(int i=0;i<city->size();++i){
+        if(city->at(i)==' ') (*city)[i]='_';
+        else if(city->at(i)=='-') (*city)[i]='_';
+    }
+}
+
 DbManager::DbManager(const QString &path)
 {
     sqldb = QSqlDatabase::addDatabase("QSQLITE");
@@ -32,28 +39,30 @@ bool DbManager::isOpen() const
     return sqldb.isOpen();
 }
 
-bool DbManager::createTable()
+bool DbManager::createTable(QString city)
 {
     bool success = false;
+    verifyCityName(&city);
 
     QSqlQuery query;
-    query.prepare("CREATE TABLE pollution(id INTEGER PRIMARY KEY, dt INTEGER, aqi INTEGER);");
+    query.prepare("CREATE TABLE pollution_"+city+" (id INTEGER PRIMARY KEY, dt INTEGER, aqi INTEGER);");
 
     if (!query.exec())
     {
-        qDebug() << "Couldn't create the table 'pollution': one might already exist.";
+        qDebug() << "Couldn't create the table 'pollution_"+city+"' : one might already exist.";
         success = false;
     }
 
     return success;
 }
 
-bool DbManager::addData(int dt, int aqi) {
-
+bool DbManager::addData(int dt, int aqi, QString city)
+{
     bool success = false;
+    verifyCityName(&city);
 
     QSqlQuery queryAdd;
-    queryAdd.prepare("INSERT INTO pollution (dt,aqi) VALUES (:dt,:aqi)");
+    queryAdd.prepare("INSERT INTO pollution_"+city+" (dt,aqi) VALUES (:dt,:aqi)");
     queryAdd.bindValue(":dt", dt);
     queryAdd.bindValue(":aqi", aqi);
 
@@ -69,14 +78,15 @@ bool DbManager::addData(int dt, int aqi) {
     return success;
 }
 
-bool DbManager::removeData(int dt)
+bool DbManager::removeData(int dt, QString city)
 {
     bool success = false;
+    verifyCityName(&city);
 
-    if (entryExists(dt))
+    if (entryExists(dt, city))
     {
         QSqlQuery queryDelete;
-        queryDelete.prepare("DELETE FROM pollution WHERE dt = (:dt)");
+        queryDelete.prepare("DELETE FROM pollution_"+city+" WHERE dt = (:dt)");
         queryDelete.bindValue(":dt", dt);
         success = queryDelete.exec();
 
@@ -93,10 +103,12 @@ bool DbManager::removeData(int dt)
     return success;
 }
 
-void DbManager::printAllData() const
+void DbManager::printAllData(QString city)
 {
+    verifyCityName(&city);
+
     qDebug() << "Data in db:";
-    QSqlQuery query("SELECT * FROM pollution");
+    QSqlQuery query("SELECT * FROM pollution_"+city+"");
     int idDt = query.record().indexOf("dt");
     int idAqi = query.record().indexOf("aqi");
     while (query.next())
@@ -107,12 +119,13 @@ void DbManager::printAllData() const
     }
 }
 
-bool DbManager::entryExists(int dt) const
+bool DbManager::entryExists(int dt, QString city)
 {
+    verifyCityName(&city);
     bool exists = false;
 
     QSqlQuery checkQuery;
-    checkQuery.prepare("SELECT dt FROM pollution WHERE dt = (:dt)");
+    checkQuery.prepare("SELECT dt FROM pollution_"+city+" WHERE dt = (:dt)");
     checkQuery.bindValue(":dt", dt);
 
     if (checkQuery.exec())
@@ -130,10 +143,11 @@ bool DbManager::entryExists(int dt) const
     return exists;
 }
 
-QList<int*>* DbManager::getAllData() const
+QList<int*>* DbManager::getAllData(QString city)
 {
+    verifyCityName(&city);
     QList<int*>* res=new QList<int*>();
-    QSqlQuery query("SELECT * FROM pollution");
+    QSqlQuery query("SELECT * FROM pollution_"+city+"");
     int idDt = query.record().indexOf("dt");
     int idAqi = query.record().indexOf("aqi");
     while (query.next())
@@ -146,12 +160,13 @@ QList<int*>* DbManager::getAllData() const
     return res;
 }
 
-bool DbManager::removeAllData()
+bool DbManager::removeAllData(QString city)
 {
+    verifyCityName(&city);
     bool success = false;
 
     QSqlQuery removeQuery;
-    removeQuery.prepare("DELETE FROM pollution");
+    removeQuery.prepare("DELETE FROM pollution_"+city+"");
 
     if (removeQuery.exec())
     {

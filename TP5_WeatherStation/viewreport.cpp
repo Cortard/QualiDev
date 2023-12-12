@@ -1,8 +1,8 @@
 #include "viewreport.h"
 #include "dbmanager.h"
 
-ViewReport::ViewReport(WeatherReport *wreport, Ui::TP5_WeatherStationClass *ui)
-    : model(wreport), ui(ui)
+ViewReport::ViewReport(WeatherReport *wreport, Ui::TP5_WeatherStationClass *ui, QString* city)
+    : model(wreport), ui(ui), city(city)
 {
     init();
     ViewReport::update();
@@ -22,6 +22,7 @@ void ViewReport::init()
     ui->lineEdit_lat->setReadOnly(1);
     ui->lineEdit_description->clear();
     ui->lineEdit_description->setReadOnly(1);
+    ui->label_8->setText(*city);
 }
 
 void ViewReport::update()
@@ -32,4 +33,5 @@ void ViewReport::update()
     ui->lineEdit_lon->setText(QString::number(model->getLon()));
     ui->lineEdit_lat->setText(QString::number(model->getLat()));
     ui->lineEdit_description->setText(model->getDescription());
+    ui->label_8->setText(*city);
 }

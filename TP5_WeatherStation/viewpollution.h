@@ -32,8 +32,9 @@ private:
     QLineSeries *series; //> contains data to be displayed
     QDateTimeAxis *axisX; //> need to be updated on data change
     QValueAxis* axisY; //> need to be updated on data change
+    QString* city;
 public:
-    ViewPollution(DbManager*, QWidget*);
+    ViewPollution(DbManager*, QWidget*, QString* city);
 
     void update() override;
 };

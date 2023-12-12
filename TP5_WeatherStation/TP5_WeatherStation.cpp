@@ -7,6 +7,8 @@
 #include <QVariantMap>
 #include <QJsonArray>
 #include <QMessageBox>
+#include <QDateTime>
+#include <QInputDialog>
 
 #include "TP5_WeatherStation.h"
 #include "ui_TP5_WeatherStation.h"
@@ -19,14 +21,17 @@ TP5_WeatherStation::TP5_WeatherStation(DbManager *dbm, QWidget* parent)
     , weatherReport (new WeatherReport) // Weather Data class
     , dbmanager (dbm)                   // DB Manager, for Pollution Data
     , netmanager (nullptr)              // NetWork Manager, for http requests
+    , lat(46.0398)
+    , lon(5.4133)
+    , city("Bourg-en-Bresse")
 {
     ui->setupUi(this);
 
     // Weather report View
-    reportView = new ViewReport(weatherReport,ui);
+    reportView = new ViewReport(weatherReport,ui,&city);
     weatherReport->addObserver(reportView);
     // Pollution Forecast View
-    pollutionView = new ViewPollution(dbmanager, ui->groupBox_pollution);
+    pollutionView = new ViewPollution(dbmanager, ui->groupBox_pollution,&city);
     dbmanager->addObserver(pollutionView);
 
     // netmanager here (or better in initialisation list)  + callback to replyFinished
@@ -40,6 +45,7 @@ TP5_WeatherStation::TP5_WeatherStation(DbManager *dbm, QWidget* parent)
     connect(ui->pushButton_weather_request, &QPushButton::pressed, this, &TP5_WeatherStation::weatherRequest);
     connect(ui->pushButton_weather_request, &QPushButton::pressed, this, &TP5_WeatherStation::airRequest);
 
+    connect(ui->pushButton_city, &QPushButton::pressed, this, &TP5_WeatherStation::changeCity);
 }
 
 TP5_WeatherStation::~TP5_WeatherStation()
@@ -64,13 +70,13 @@ void TP5_WeatherStation::request(QString URL){
 void TP5_WeatherStation::weatherRequest()
 {
     // Pour tester les entêtes HTTP
-    QString URL = "https://api.openweathermap.org/data/2.5/weather?q=bourg-en-bresse,fr&units=metric&lang=fr&appid=25a11b3df66f2b388079b21253919952";
+    QString URL = "https://api.openweathermap.org/data/2.5/weather?q="+city+",fr&units=metric&lang=fr&appid=25a11b3df66f2b388079b21253919952";
     request(URL);
 }
 
 void TP5_WeatherStation::airRequest(){
     // Pour tester les entêtes HTTP
-    QString URL = "https://api.openweathermap.org/data/2.5/air_pollution/forecast?lat=46.0398&lon=5.4133&units=metric&lang=fr&appid=25a11b3df66f2b388079b21253919952";
+    QString URL= "http://api.openweathermap.org/data/2.5/air_pollution/history?lat="+QString::number(lat)+"&lon="+QString::number(lon)+"&start="+QString::number(QDateTime::currentDateTimeUtc().addDays(-1).toSecsSinceEpoch())+"&end="+QString::number(QDateTime::currentDateTimeUtc().toSecsSinceEpoch())+"&units=metric&lang=fr&appid=25a11b3df66f2b388079b21253919952";
     request(URL);
 }
 
@@ -90,8 +96,11 @@ void TP5_WeatherStation::replyFinished(QNetworkReply* reply){
 
         if(jsonObj.contains("id"))
             weatherReplyFinished(&jsonObj);
-        else
+        else if (jsonObj.contains("list"))
             airReplyFinished(&jsonObj);
+        else
+            cityReplyFinished(&jsonResponse);
+
     } else {
         QMessageBox messageBox;
         messageBox.critical(0,"Error","Failed to connect to API !");
@@ -112,17 +121,41 @@ void TP5_WeatherStation::weatherReplyFinished(QJsonObject* data)
     weatherReport->setTemp_min(mainArray["temp_min"].toDouble());
     weatherReport->setTemp_max(mainArray["temp_max"].toDouble());
 
-    weatherReport->setDescription((*data)["name"].toString());
+    weatherReport->setDescription((*data)["weather"].toArray().at(0)["description"].toString());
     weatherReport->notifyObserver();
 }
 
 void TP5_WeatherStation::airReplyFinished(QJsonObject* data)
 {
     if(!dbmanager->isOpen()) return;
+    dbmanager->createTable(city);
     QJsonArray listArray = (*data)["list"].toArray();
     for(int i=0; i<listArray.size(); ++i){
         QJsonObject day=listArray[i].toObject();
-        if(!dbmanager->entryExists(day["dt"].toInt()))
-            dbmanager->addData(day["dt"].toInt(),(day["main"].toObject())["aqi"].toInt());
+        if(!dbmanager->entryExists(day["dt"].toInt(),city))
+            dbmanager->addData(day["dt"].toInt(),(day["main"].toObject())["aqi"].toInt(),city);
+    }
+    dbmanager->notifyObserver();
+}
+
+void TP5_WeatherStation::cityReplyFinished(QJsonDocument* data){
+    QJsonArray jsonArray = data->array();
+
+    QJsonObject jsonObj = jsonArray[0].toObject();
+    this->lat = jsonObj["lat"].toDouble();
+    this->lon = jsonObj["lon"].toDouble();
+    this->city = jsonObj["name"].toString();
+
+    weatherRequest();
+    airRequest();
+}
+
+void TP5_WeatherStation::changeCity(){
+    bool ok;
+    QString ville = QInputDialog::getText(this, "Changer la ville", "Nouvelle ville :", QLineEdit::Normal, "", &ok);
+
+    if(ok && !ville.isEmpty()) {
+        QString URL ="http://api.openweathermap.org/geo/1.0/direct?q=" + ville +"&limit=5&appid=25a11b3df66f2b388079b21253919952";
+        request(URL);
     }
 }
